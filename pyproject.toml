@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tone-tune"
+version = "0.1.0"
+description = "A lightweight, local-first communication assistant powered by Ollama and Gemma."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ollama",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pylint",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# prompt templates
+[tool.setuptools.package-data]
+tonetune = ["prompt_templates/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
