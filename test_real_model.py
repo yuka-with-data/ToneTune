@@ -1,4 +1,10 @@
-"""Run a real draft-generation test using the local Ollama model."""
+"""
+Manual integration test for ToneTune's draft-generation pipeline.
+
+Uses the actual local Ollama model to generate a draft from sample user input.
+Unlike the automated unit tests, this script verifies that prompt construction,
+model communication, and draft generation work together in a real environment.
+"""
 
 from tonetune.generator import generate_draft
 
