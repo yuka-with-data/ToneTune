@@ -1,0 +1,17 @@
+Create a draft based on the user's input and preferences.
+
+Communication type: {communication_type}
+Desired tone: {tone}
+
+User's input:
+{user_input}
+
+Instructions:
+
+- Preserve the user's intended meaning and key details.
+- Adapt te wording and structure to the specified communication type.
+- Match the requested tone while keeping the language natural.
+- Expand fragments or keywords into complete thoughts when appropriate.
+- Do not invent facts, names, events, or commitments.
+- Keep the draft concise and relevant to the user's input.
+- Return only the draft, without explanations or commentary.
