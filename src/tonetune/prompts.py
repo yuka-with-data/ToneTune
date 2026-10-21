@@ -7,8 +7,7 @@ Keeps prompt construction separate from model generation.
 
  """
 
-from importlib.readers import files
-from typing import Dict, List, Optional
+from importlib.resources import files
 
 def load_template(filename: str) -> str:
     """ Load and return a prompt template from the packaged template directory."""
