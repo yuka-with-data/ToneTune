@@ -42,4 +42,6 @@ def generate_draft(
 
     except Exception as error:
         # Handle unexpected errors
-        raise RuntimeError(f"Failed to generate draft. Is Ollama running? Details: {error}") from error
+        raise RuntimeError(
+            f"Failed to generate draft. Is Ollama running? Details: {error}"
+        ) from error

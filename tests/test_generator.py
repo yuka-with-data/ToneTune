@@ -1,8 +1,7 @@
 """Tests for ToneTune draft generation."""
 
-import pytest
 from unittest.mock import Mock, patch
-
+import pytest
 from ollama import ResponseError
 from tonetune.generator import generate_draft
 

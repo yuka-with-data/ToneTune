@@ -35,7 +35,10 @@ def test_run_tonetune_displays_generated_draft():
     """Verify that the CLI displays the draft returned by generate_draft."""
     with (
         patch("builtins.input", side_effect=["Invite my teammate.", "3", "2"]),
-        patch("tonetune.cli.generate_draft", return_value="Hey! Join us for the party.") as mock_generate,
+        patch(
+            "tonetune.cli.generate_draft",
+            return_value="Hey! Join us for the party."
+            ) as mock_generate,
         patch("builtins.print") as mock_print,
     ):
         run_tonetune()

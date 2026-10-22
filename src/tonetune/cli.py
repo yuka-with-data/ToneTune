@@ -7,7 +7,7 @@ and displays the result in the terminal.
 
 from tonetune.generator import generate_draft
 
-""" Define Communication types and tones. """
+# Define Communication types and tones.
 COMMUNICATION_TYPES = [
     "Email",
     "Work message",
