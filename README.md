@@ -16,7 +16,6 @@ Built with Python and Ollama, `ToneTune` is a lightweight, local-first communica
 - Run locally: Use Ollama to generate drafts on your own machine.
 - Stay in control: Review and edit the generated draft before using it.
 
-
 ## Quick Start
 
 Once you have completed the installation steps and started Ollama with the required model, run `ToneTune` from the project root:
@@ -123,7 +122,6 @@ python -m tonetune.cli
 - Choose a communication type.
 - Choose a tone.
 - Review your generated draft.
-
 
 ## Testing and Development
 
