@@ -27,3 +27,47 @@ python -m tonetune.cli
 ```
 
 Follow the prompts to enter your thoughts, choose a communication type and tone, and review your draft.
+
+## Example
+
+`ToneTune` can turn even a few rough keywords into a usable draft.
+
+User input:
+
+```bash
+ask teammates update projects work
+```
+
+Communication type: Work message
+
+Tone: Casual
+
+Generated draft:
+
+```bash
+Hey team, do you all have a quick moment to update me on where we are with our current projects? Thanks!
+```
+
+You don't need to have the right words ready. Start with a few thoughts, choose your communication type and tone, and let `ToneTune` help shape them into a draft you can review and edit.
+
+## Prerequisites
+
+Before installing `ToneTune`, make sure you have:
+
+- Python 3.12 or later
+- Ollama installed and running
+- the `gemma4:e4b` model downloaded through Ollama
+
+To download the default model, run:
+
+```bash
+# Download the default language model.
+ollama pull gemma4:e4b
+```
+
+`ToneTune` runs the model locally through Ollama, so you don't need an external API key.
+
+The official Ollama documentation:
+
+- [Ollama CLI Reference](https://docs.ollama.com/cli)
+- [Ollama Model Library](https://ollama.com/library)
