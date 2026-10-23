@@ -4,6 +4,11 @@ ToneTune command-line interface.
 Collects user input and writing preferences, generates a draft using the local Ollama MOdel,
 and displays the result in the terminal.
  """
+# Support a lightweight animated drafting indicator.
+import itertools
+import sys
+import threading
+import time
 
 from tonetune.generator import generate_draft
 
@@ -62,6 +67,21 @@ def get_choice(prompt:str, choices: list[str]) -> str:
 
         print(f"Please enter a number between 1 and {len(choices)}.")
 
+# Show an animated indicator while draft generation is in progress.
+def show_drafting(stop_event: threading.Event) -> None:
+    """Display a simple animated indicator until generation finishes."""
+    for dots in itertools.cycle([".", "..", "..."]):
+        if stop_event.is_set():
+            break
+
+        sys.stdout.write(f"\rDrafting{dots}   ")
+        sys.stdout.flush()
+        time.sleep(0.4)
+
+    # Clear the indicator line when generation finishes.
+    sys.stdout.write("\r" + " " * 20 + "\r")
+    sys.stdout.flush()
+
 # Generate a draft and display it to the user.
 def run_tonetune() -> None:
     """ Collect preferences, generate a draft, and display the results. """
@@ -74,12 +94,25 @@ def run_tonetune() -> None:
     tone = get_choice("Choose a tone:", TONES)
 
     try:
-        # Generate a draft using the selected preferences
-        draft = generate_draft(
-            user_input=user_input,
-            communication_type=communication_type,
-            tone=tone,
+        # Start the drafting indicator in a background thread.
+        stop_event = threading.Event()
+        indicator = threading.Thread(
+            target=show_drafting,
+            args=(stop_event,),
         )
+        indicator.start()
+
+        try:
+            # Generate a draft using the selected preferences.
+            draft = generate_draft(
+                user_input=user_input,
+                communication_type=communication_type,
+                tone=tone,
+            )
+        finally:
+            # Stop the indicator whether generation succeeds or fails.
+            stop_event.set()
+            indicator.join()
 
         # Display the generated draft.
         print("\n--- YOUR DRAFT ---")
