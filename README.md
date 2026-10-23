@@ -123,3 +123,73 @@ python -m tonetune.cli
 - Choose a communication type.
 - Choose a tone.
 - Review your generated draft.
+
+
+## Testing and Development
+
+ToneTune includes automated tests using pytest and code quality checks using pylint and markdownlint.
+
+Install the development dependencies:
+
+```bash
+python -m pip install -e ".[dev]"
+```
+
+Run the automated tests:
+
+```bash
+python -m pytest
+```
+
+Run Pylint on the python files:
+
+```bash
+pylint $(git ls-files '*.py')
+```
+
+GitHub Actions workflows run the automated tests, Pylint, and Markdown linting to help maintain code quality.
+
+## Privacy and Limitations
+
+- `ToneTune` uses Ollama to run a language model locally on your machine.
+- Your input is sent to your local Ollama instance for draft generation rather than and external AI API.
+- No external API key is required.
+
+## Limitations
+
+- Generated drafts may not fully capture your intended meaning or tone. Always review and edit the output before using it.
+- Results depend on the selected model and the information you provide.
+- Very vague input may produce a generic draft or require additional context.
+- `ToneTune` is an experimental project. It is a drafting aid, not a replacement for your own judgment.
+
+## Troubleshooting
+
+### Ollama is not running
+
+Make sure Ollama is installed and running before launching `ToneTune`. On Windows, Ollama may already be running in the background.
+
+If the Ollama server is not running, open a terminal and start it:
+
+```bash
+ollama serve
+```
+
+Keep the terminal open while using ToneTune. If Ollama is already running, you generally don't need to run this command again.
+
+See the [Ollama Documentation](https://docs.ollama.com/) for setup instructions.
+
+### The required model is missing
+
+Download the default model:
+
+```bash
+ollama pull gemma4:e4b
+```
+
+### Draft generation fails
+
+Check that Ollama is running and that the configured model is available. If the problem persists, review the error message and verify your local setup.
+
+## License
+
+This project is licensed under the Apache License 2.0. See the LICENSE file for details.
