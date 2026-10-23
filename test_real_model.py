@@ -12,6 +12,7 @@ draft = generate_draft(
     user_input="Ask my teammate for a project update.",
     communication_type="work message",
     tone="friendly",
+    # model="nonexistent-model:test" #Intentionally use a missing model.
 )
 
 print("\nGenerated draft:\n")
