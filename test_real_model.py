@@ -8,12 +8,16 @@ model communication, and draft generation work together in a real environment.
 
 from tonetune.generator import generate_draft
 
-draft = generate_draft(
-    user_input="Ask my teammate for a project update.",
-    communication_type="work message",
-    tone="friendly",
-    # model="nonexistent-model:test" #Intentionally use a missing model.
-)
+try:
+    draft = generate_draft(
+        user_input="Ask my teammate for a project update.",
+        communication_type="work message",
+        tone="friendly",
+        # model="nonexistent-model:test",  # Intentionally test a missing model.
+    )
 
-print("\nGenerated draft:\n")
-print(draft)
+    print("\nGenerated draft:\n")
+    print(draft)
+
+except RuntimeError as error:
+    print(f"\nUnable to generate your draft: {error}")
