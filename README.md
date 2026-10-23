@@ -147,6 +147,12 @@ Run Pylint on the python files:
 pylint $(git ls-files '*.py')
 ```
 
+Check Markdown files for formatting errors.
+
+```bash
+npx markdownlint-cli2 "**/*.md"
+```
+
 GitHub Actions workflows run the automated tests, Pylint, and Markdown linting to help maintain code quality.
 
 ## Privacy and Limitations
