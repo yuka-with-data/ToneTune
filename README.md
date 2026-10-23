@@ -71,3 +71,55 @@ The official Ollama documentation:
 
 - [Ollama CLI Reference](https://docs.ollama.com/cli)
 - [Ollama Model Library](https://ollama.com/library)
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd tone-tune
+```
+
+2. Create a virtual environment:
+
+```bash
+python -m venv .venv
+```
+
+3. Activate the virtual environment.
+
+On Windows PowerShell:
+
+```bash
+.\.venv\Scripts\Activate.ps1
+```
+
+4. Install `ToneTune`:
+
+```bash
+python -m pip install -e .
+```
+
+For development and testing, install the development depenencies instead:
+
+```bash
+python -m pip install -e ".[dev]"
+```
+
+## Usage
+
+1. Make sure Ollama is running and the `gemma4:e4b` model is available locally.
+
+2. From the project root, launch `ToneTune`:
+
+```bash
+python -m tonetune.cli
+```
+
+3. Follow the prompts to:
+
+- Enter your thoughts, keywords, or rough fragments.
+- Choose a communication type.
+- Choose a tone.
+- Review your generated draft.
