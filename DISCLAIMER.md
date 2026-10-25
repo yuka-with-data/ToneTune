@@ -6,4 +6,4 @@ Generated content may be inaccurate, incomplete, or different from your intended
 
 `ToneTune` is designed to run language models locally through Ollama, but privacy depends on your configulation and environment. Avoid entering sensitive information unless you understand how it is handled.
 
-`ToneTune` is provided "as is", without guarantees of accuracy or suitability for a particular purpose. See the LICENSE file for the project's license terms.
+`ToneTune` is provided "as is", without guarantees of accuracy or suitability for a particular purpose. See the [LICENSE](LICENSE) file for the project's license terms.
