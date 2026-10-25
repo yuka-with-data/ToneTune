@@ -1,5 +1,11 @@
 # ToneTune
 
+<!-- Project version, license, and CI status badges. -->
+![Python](https://img.shields.io/badge/Python-3.12%2B-blue)
+![License](https://img.shields.io/badge/License-Apache%202.0-blue)
+![Status](https://img.shields.io/badge/status-active%20development-orange)
+![Hacktoberfest](https://img.shields.io/badge/Hacktoberfest-2026-purple)
+
 > Turn rough thoughts into clear, natural, ready-to-edit messages.
 
 Have you ever struggled to find the right wards to express exactly what you are thinking?
