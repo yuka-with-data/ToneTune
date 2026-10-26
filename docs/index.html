@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Define page metadata and basic styling. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ToneTune turns rough thoughts into clear, natural, ready-to-edit messages.">
+
+  <title>ToneTune | Find the words</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #f8f7f4;
+      color: #292b30;
+      font: 17px/1.7 system-ui, sans-serif;
+    }
+
+    main, header, footer {
+      max-width: 850px;
+      margin: auto;
+      padding: 24px;
+    }
+
+    h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); line-height: 1.1; }
+    h2 { margin-top: 48px; }
+    .muted { color: #626670; }
+    a { color: #365d9b; }
+    .button {
+      display: inline-block;
+      padding: 10px 16px;
+      margin: 8px 8px 8px 0;
+      border: 1px solid #c9ccd2;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .primary { background: #292b30; color: white; }
+    .example {
+      padding: 20px;
+      background: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      overflow-wrap: anywhere;
+    }
+    code, pre { font-family: ui-monospace, monospace; }
+    pre { white-space: pre-wrap; }
+  </style>
+  <style>
+    /* Increase the project name size in the header. */
+    .site-title {
+        font-size: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <strong class="site-title">🪶ToneTune</strong>
+    <a href="https://github.com/yuka-with-data/ToneTune"
+       style="float: right;">View source</a>
+  </header>
+
+  <main>
+    <section>
+      <p class="muted">A local-first communication drafting assistant</p>
+      <h1>Find the words you want to say.</h1>
+      <p class="muted">
+        Turn rough thoughts, incomplete sentences, and keywords
+        into clear, natural, ready-to-edit messages.
+      </p>
+
+      <a class="button primary"
+         href="https://github.com/yuka-with-data/ToneTune">
+        Explore ToneTune
+      </a>
+      <a class="button" href="#example">See an example</a>
+    </section>
+
+    <section id="example">
+      <h2>From rough thoughts to a clear message</h2>
+      <p class="muted">
+        You don't need to write a perfect prompt. Start with what
+        you want to express.
+      </p>
+
+      <div class="example">
+        <h3>Your input</h3>
+        <p>ask teammates update projects work</p>
+
+        <p class="muted">Type: Work message · Tone: Friendly</p>
+
+        <h3>Your draft</h3>
+        <p>
+          Hey team, do you all have a quick moment to update me
+          on where we are with our current projects? Thanks!
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>How it works</h2>
+      <ol>
+        <li>Share your rough thoughts or key points.</li>
+        <li>Choose a communication type and tone.</li>
+        <li>Review, edit, and use the draft in your own words.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Designed for your workflow</h2>
+      <ul>
+        <li>Works with incomplete thoughts and fragments.</li>
+        <li>Supports different communication types and tones.</li>
+        <li>Uses local language models through Ollama.</li>
+        <li>Keeps you in control of the final message.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Get started</h2>
+      <p>Install Python and Ollama, then download the model:</p>
+      <pre><code>ollama pull gemma4:e4b</code></pre>
+      <p>Install ToneTune from its repository and run:</p>
+      <pre><code>python -m tonetune.cli</code></pre>
+      <p class="muted">
+        See the README for complete installation instructions.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <p class="muted">
+      ToneTune is an experimental open-source project.
+      Always review generated drafts before using them.
+    </p>
+    <a href="https://github.com/yuka-with-data/ToneTune">
+      GitHub repository
+    </a>
+  </footer>
+</body>
+</html>
