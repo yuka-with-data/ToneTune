@@ -1,0 +1,265 @@
+
+/* ToneTune demo website
+   Warm, minimal styling with a clear content hierarchy. */
+
+/* 1. Theme */
+:root {
+  --color-bg: #F7F2EA;
+  --color-surface: #FFFCF7;
+  --color-sand: #EDE2D3;
+  --color-tan: #C5A98B;
+  --color-brown: #8B684B;
+  --color-dark: #49392E;
+  --color-text: #403B35;
+  --color-muted: #81766B;
+  --color-border: #E4D8C9;
+
+  --radius: 14px;
+  --content-width: 900px;
+}
+
+/* 2. Base */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font: 16px/1.75 system-ui, sans-serif;
+}
+
+a {
+  color: var(--color-brown);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-dark);
+}
+
+h1, h2, h3 {
+  color: var(--color-dark);
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 7vw, 4.2rem);
+  letter-spacing: -0.04em;
+  max-width: 750px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+p {
+  margin: 12px 0;
+}
+
+.muted {
+  color: var(--color-muted);
+}
+
+/* 3. Shared layout */
+header, main, footer {
+  width: min(100% - 40px, var(--content-width));
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+}
+
+main {
+  padding: 30px 0 70px;
+}
+
+section {
+  margin-bottom: 76px;
+}
+
+footer {
+  padding: 28px 0 40px;
+  border-top: 1px solid var(--color-border);
+}
+
+/* 4. Header */
+.site-title {
+  color: var(--color-dark);
+  font-size: 1.5rem;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+}
+
+.header-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* 5. Hero */
+.hero {
+  padding: 55px 0 65px;
+}
+
+.hero h1 {
+  margin: 16px 0;
+}
+
+.hero-description {
+  max-width: 650px;
+  font-size: 1.1rem;
+}
+
+/* 6. Buttons */
+.button {
+  display: inline-block;
+  padding: 11px 20px;
+  margin: 14px 8px 0 0;
+  border: 1px solid var(--color-tan);
+  border-radius: 9px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.primary {
+  background: var(--color-dark);
+  color: white;
+  border-color: var(--color-dark);
+}
+
+.primary:hover {
+  background: var(--color-brown);
+  color: white;
+}
+
+/* 7. Example */
+.example {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 20px;
+  padding: 24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.example-input,
+.example-output {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.example-input {
+  background: var(--color-sand);
+}
+
+.example-output {
+  background: white;
+  border: 1px solid var(--color-border);
+}
+
+.example h3 {
+  margin-top: 0;
+}
+
+.example-label {
+  color: var(--color-brown);
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* 8. Feature cards */
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.feature {
+  padding: 20px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+/* 9. How it works */
+.steps {
+  padding-left: 24px;
+}
+
+.steps li {
+  padding: 6px 0 6px 8px;
+}
+
+/* 10. Getting started */
+.get-started {
+  padding: 30px;
+  background: var(--color-sand);
+  border-radius: var(--radius);
+}
+
+pre {
+  padding: 16px 20px;
+  overflow-x: auto;
+  background: var(--color-dark);
+  color: #F7F2EA;
+  border-radius: 9px;
+  font-size: 0.9rem;
+}
+
+code {
+  font-family: ui-monospace, monospace;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* 11. Responsive layout */
+@media (max-width: 650px) {
+  header, main, footer {
+    width: min(100% - 32px, var(--content-width));
+  }
+
+  .hero {
+    padding: 35px 0 45px;
+  }
+
+  section {
+    margin-bottom: 55px;
+  }
+
+  .example,
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .example {
+    padding: 14px;
+  }
+
+  .get-started {
+    padding: 22px;
+  }
+}

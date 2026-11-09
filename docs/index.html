@@ -6,65 +6,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="ToneTune turns rough thoughts into clear, natural, ready-to-edit messages.">
+  <link rel="stylesheet" href="assets/style.css">
 
-  <title>ToneTune | Find the words</title>
-
-  <style>
-    body {
-      margin: 0;
-      background: #f8f7f4;
-      color: #292b30;
-      font: 17px/1.7 system-ui, sans-serif;
-    }
-
-    main, header, footer {
-      max-width: 850px;
-      margin: auto;
-      padding: 24px;
-    }
-
-    h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); line-height: 1.1; }
-    h2 { margin-top: 48px; }
-    .muted { color: #626670; }
-    a { color: #365d9b; }
-    .button {
-      display: inline-block;
-      padding: 10px 16px;
-      margin: 8px 8px 8px 0;
-      border: 1px solid #c9ccd2;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-    .primary { background: #292b30; color: white; }
-    .example {
-      padding: 20px;
-      background: white;
-      border: 1px solid #e0e0e0;
-      border-radius: 12px;
-      overflow-wrap: anywhere;
-    }
-    code, pre { font-family: ui-monospace, monospace; }
-    pre { white-space: pre-wrap; }
-  </style>
-  <style>
-    /* Increase the project name size in the header. */
-    .site-title {
-        font-size: 1.5rem;
-    }
-  </style>
+  <title>🪶ToneTune | From Thoughts to Words</title>
 </head>
 
 <body>
   <header>
-    <strong class="site-title">🪶ToneTune</strong>
-    <a href="https://github.com/yuka-with-data/ToneTune"
-       style="float: right;">View source</a>
+    <strong class="site-title">🪶 ToneTune</strong>
+    <a class="header-link" href="https://github.com/yuka-with-data/ToneTune">View source ↗</a>
   </header>
 
   <main>
-    <section>
+    <section class="hero">
       <p class="muted">A local-first communication drafting assistant</p>
-      <h1>Find the words you want to say.</h1>
+      <h1>From rough thoughts to the right words.</h1>
       <p class="muted">
         Turn rough thoughts, incomplete sentences, and keywords
         into clear, natural, ready-to-edit messages.
@@ -72,7 +28,7 @@
 
       <a class="button primary"
          href="https://github.com/yuka-with-data/ToneTune">
-        Explore ToneTune
+        Explore ToneTune↗
       </a>
       <a class="button" href="#example">See an example</a>
     </section>
@@ -85,16 +41,19 @@
       </p>
 
       <div class="example">
-        <h3>Your input</h3>
-        <p>ask teammates update projects work</p>
+        <div class="example-input">
+          <p class="example-label">Your input</p>
+          <p>ask teammates update projects work</p>
+          <p class="muted">Type: Work message · Tone: Friendly</p>
+        </div>
 
-        <p class="muted">Type: Work message · Tone: Friendly</p>
-
-        <h3>Your draft</h3>
-        <p>
-          Hey team, do you all have a quick moment to update me
-          on where we are with our current projects? Thanks!
-        </p>
+        <div class="example-output">
+          <p class="example-label">AI-generated draft</p>
+          <p>
+            Hey team, do you all have a quick moment to update me
+            on where we are with our current projects? Thanks!
+          </p>
+        </div>
       </div>
     </section>
 
@@ -130,13 +89,12 @@
   </main>
 
   <footer>
-    <hr>
     <p class="muted">
       ToneTune is an experimental open-source project.
       Always review generated drafts before using them.
     </p>
     <a href="https://github.com/yuka-with-data/ToneTune">
-      GitHub repository
+      GitHub repository ↗
     </a>
   </footer>
 </body>
